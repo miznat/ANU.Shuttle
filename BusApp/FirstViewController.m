@@ -11,6 +11,7 @@
 #import "RouteInfoManager.h"
 #import "BusDBManager.h"
 #import "GAI.h"
+#import "ECSlidingViewController.h"
 
 
 @interface FirstViewController ()
@@ -43,6 +44,7 @@
     [super viewDidLoad];
     
     [self.menuButton addTarget:self action:@selector(menuButtonTapped) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addGestureRecognizer:[self slidingViewController].panGesture];
     
     [self setNeedsStatusBarAppearanceUpdate];
     

@@ -11,6 +11,7 @@
 #import "RouteInfoManager.h"
 #import "BusDBManager.h"
 #import "GAI.h"
+#import "ECSlidingViewController.h"
 
 
 @interface SecondViewController ()
@@ -40,6 +41,7 @@
     [self setNeedsStatusBarAppearanceUpdate];
     
      [self.menuButton addTarget:self action:@selector(menuButtonTapped) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addGestureRecognizer:[self slidingViewController].panGesture];
     
     m_fShowDetail = NO;
     [m_detailTableView setTag:2];

@@ -11,6 +11,7 @@
 #import "SecondViewController.h"
 #import "BusDBManager.h"
 #import "GAI.h"
+#import "ECSlidingViewController.h"
 
 @interface Times2ViewController ()
 
@@ -37,6 +38,7 @@
     [super viewDidLoad];
     
      [self.menuButton addTarget:self action:@selector(menuButtonTapped) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addGestureRecognizer:[self slidingViewController].panGesture];
     
     [self setNeedsStatusBarAppearanceUpdate];
     

@@ -12,6 +12,7 @@
 @interface MenuViewController () {
     NSArray *menuItems;
     NSArray *menuItemsNames;
+    int selectedIndex;
 }
 
 @property (nonatomic, strong) ECSlidingViewController *slideVC;
@@ -28,10 +29,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    selectedIndex = 0;
+    
     [self.tableView setBackgroundColor:[UIColor blackColor]];
     [self.view setBackgroundColor:[UIColor blackColor]];
     
     self.tableView.separatorInset = UIEdgeInsetsZero;
+    self.tableView.separatorColor = [UIColor blackColor];
     
     menuItemsNames = @[NSLocalizedString(@"UniSafe", @"UniSafe"),NSLocalizedString(@"UniStops", @"UniStops"),NSLocalizedString(@"Fenner Bus", @"Fenner Bus"),NSLocalizedString(@"INFO", @"INFO")];
     menuItems = @[@"FirstViewController",@"SecondViewController",@"Times2ViewController",@"InfoViewController"];
@@ -82,9 +86,10 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     cell.backgroundColor = [UIColor blackColor];
-    cell.textLabel.textColor = cell.isSelected ? [UIColor colorWithRed:0. green:0. blue:1. alpha:1.] : [UIColor colorWithRed:1. green:1. blue:0 alpha:1.];
+    cell.textLabel.textColor = selectedIndex == indexPath.row ? [UIColor colorWithRed:0. green:0. blue:1. alpha:1.] : [UIColor colorWithRed:1. green:1. blue:0 alpha:1.];
     cell.textLabel.text = menuItemsNames[indexPath.row];
-    [cell.textLabel setFont:[UIFont fontWithName:@"LithosPro-Black" size:20]];
+    [cell.textLabel setFont:[UIFont fontWithName:@"LithosPro-Black" size:15.]];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;
 }
@@ -94,6 +99,8 @@
     cell.textLabel.textColor = [UIColor colorWithRed:0. green:0. blue:1. alpha:1.];
     self.slideVC.topViewController = [[NSClassFromString(menuItems[indexPath.row]) alloc] initWithNibName:menuItems[indexPath.row] bundle:nil];
     [self.slideVC resetTopViewAnimated:YES];
+    selectedIndex = indexPath.row;
+    [tableView reloadData];
 }
 /*
 #pragma mark - Navigation
