@@ -45,6 +45,7 @@
     
     [self.menuButton addTarget:self action:@selector(menuButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     [self.view addGestureRecognizer:[self slidingViewController].panGesture];
+    [self.view addGestureRecognizer:[self slidingViewController].resetTapGesture];
     
     [self setNeedsStatusBarAppearanceUpdate];
     
