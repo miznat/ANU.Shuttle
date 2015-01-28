@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+
+.firstcell{
+	padding:10px;
+	border-top:solid #999;
+	border-right:solid #999;
+	border-left:solid #999;
+	border-width:1px;
+	padding-bottom:25px;
+	background-color:#152124;
+	
+	
+	
+	
+}
+
+firstcell:hover {
+	background-color:#FFFAFA;
+	background-opacity:0.5;
+	
+}
+
+firstcell:active { 
+	background-color:#333;
+}
+
+.lastcell{
+	padding:10px;
+	border-bottom:solid #999;
+	border-right:solid #999;
+	border-left:solid #999;
+	border-width:1px;
+	padding-bottom:25px;
+	background-color:#152124;
+	
+	
+	
+}
+
+
+.ayath{
+	padding:10px;
+	order-bottom:solid #999;
+	order-style:solid;
+	border-right:solid #999;
+	border-left:solid #999;
+	border-width:1px;
+	padding-bottom:25px;
+	background-color:#152124;
+	
+	
+	
+}
+
+ayath:hover {
+	background-color:#FDF4F4;
+	background-opacity:0.5;
+	
+}
+
+ayath:active { 
+	background-color:#333;
+}

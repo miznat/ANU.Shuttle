@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+h2 {
+	font-style: normal;
+	font-weight: normal;	
+	line-height: 1.2em;
+	text-align:center;
+	color:#983030;
+}
+
+p.arabic {
+    color:#4DDBFF; 
+    font-size:25px; 
+    direction: rtl; 
+    text-align:center;
+    line-height:150%;
+
+}
+
+p.text {
+    color:#4DDBFF; 
+    font-size:15px;
+    text-align:center;
+    direction: ltr; 
+    font-family : Georgia, Verdana, Lucida Sans Unicode, sans-serif; 
+
+}
+
+p.title {
+    color:#983030; 
+    font-size:12px; 
+    direction: ltr; 
+    font-family : Georgia, Verdana, Lucida Sans Unicode, sans-serif;
+    text-align:center;
+    font-weight: bold;
+
+}
+
+p.rectangle {
+	background: #8F2400;
+	height: 25px;
+	width: 300px;
+	
+}
+

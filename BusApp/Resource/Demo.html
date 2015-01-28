@@ -1,0 +1,508 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="pingback" href="http://www.ioslearner.com/xmlrpc.php" />
+
+	<title>Generate PDF programmatically in iPhone/iPad SDK | iOS Learner</title>
+	<meta name="keywords" content="generate pdf iphone,generate pdf ipad,Generate pdf iPhone SDK,generate pdf programmatically iPhone,generate pdf XCode,UIGraphicsBeginPDFContextToFile,UIGraphicsBeginPDFPageWithInfo,pdf iPhone,generate pdf iOS,pdf generation iPhone,draw text in pdf iPhone,draw image in pdf context iPhone,generate pdf iPhone app,generate pdf iPhone application" />
+<link rel="alternate" type="application/rss+xml" title="iOS Learner &raquo; Feed" href="http://www.ioslearner.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="iOS Learner &raquo; Comments Feed" href="http://www.ioslearner.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="iOS Learner &raquo; Generate PDF programmatically in iPhone/iPad SDK Comments Feed" href="http://www.ioslearner.com/generate-pdf-programmatically-iphoneipad/feed/" />
+<link rel='stylesheet' id='suffusion-theme-css'  href='http://www.ioslearner.com/wp-content/themes/suffusion/style.css?ver=3.9.2' type='text/css' media='all' />
+<link rel='stylesheet' id='suffusion-theme-skin-1-css'  href='http://www.ioslearner.com/wp-content/themes/suffusion/skins/light-theme-gray-1/skin.css?ver=3.9.2' type='text/css' media='all' />
+<!--[if !IE]>--><link rel='stylesheet' id='suffusion-rounded-css'  href='http://www.ioslearner.com/wp-content/themes/suffusion/rounded-corners.css?ver=3.9.2' type='text/css' media='all' />
+<!--<![endif]-->
+<!--[if gt IE 8]><link rel='stylesheet' id='suffusion-rounded-css'  href='http://www.ioslearner.com/wp-content/themes/suffusion/rounded-corners.css?ver=3.9.2' type='text/css' media='all' />
+<![endif]-->
+<!--[if lt IE 8]><link rel='stylesheet' id='suffusion-ie-css'  href='http://www.ioslearner.com/wp-content/themes/suffusion/ie-fix.css?ver=3.9.2' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='suffusion-generated-css'  href='http://www.ioslearner.com?ver=3.9.2&#038;suffusion-css=css' type='text/css' media='all' />
+<link rel='stylesheet' id='codebox-css'  href='http://www.ioslearner.com/wp-content/plugins/wp-codebox/css/codebox.css?ver=0.1' type='text/css' media='screen' />
+<script type='text/javascript' src='http://www.ioslearner.com/wp-includes/js/l10n.js?ver=20101110'></script>
+<script type='text/javascript' src='http://www.ioslearner.com/wp-includes/js/comment-reply.js?ver=20090102'></script>
+<script type='text/javascript' src='http://www.ioslearner.com/wp-includes/js/jquery/jquery.js?ver=1.6.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var Suffusion_JS = {
+	wrapper_width_type_page_template_1l_sidebar_php: "fixed",
+	wrapper_max_width_page_template_1l_sidebar_php: "1200",
+	wrapper_min_width_page_template_1l_sidebar_php: "600",
+	wrapper_orig_width_page_template_1l_sidebar_php: "75",
+	wrapper_width_type_page_template_1r_sidebar_php: "fixed",
+	wrapper_max_width_page_template_1r_sidebar_php: "1200",
+	wrapper_min_width_page_template_1r_sidebar_php: "600",
+	wrapper_orig_width_page_template_1r_sidebar_php: "75",
+	wrapper_width_type_page_template_1l1r_sidebar_php: "fixed",
+	wrapper_max_width_page_template_1l1r_sidebar_php: "",
+	wrapper_min_width_page_template_1l1r_sidebar_php: "600",
+	wrapper_orig_width_page_template_1l1r_sidebar_php: "75",
+	wrapper_width_type_page_template_2l_sidebars_php: "fixed",
+	wrapper_max_width_page_template_2l_sidebars_php: "1200",
+	wrapper_min_width_page_template_2l_sidebars_php: "600",
+	wrapper_orig_width_page_template_2l_sidebars_php: "75",
+	wrapper_width_type_page_template_2r_sidebars_php: "fixed",
+	wrapper_max_width_page_template_2r_sidebars_php: "1200",
+	wrapper_min_width_page_template_2r_sidebars_php: "600",
+	wrapper_orig_width_page_template_2r_sidebars_php: "75",
+	wrapper_width_type: "fixed",
+	wrapper_max_width: "1200",
+	wrapper_min_width: "600",
+	wrapper_orig_width: "75",
+	wrapper_width_type_page_template_no_sidebars_php: "fixed",
+	wrapper_max_width_page_template_no_sidebars_php: "1200",
+	wrapper_min_width_page_template_no_sidebars_php: "600",
+	wrapper_orig_width_page_template_no_sidebars_php: "75",
+	suf_nav_delay: "500",
+	suf_nav_effect: "fade",
+	suf_navt_delay: "500",
+	suf_navt_effect: "fade",
+	suf_jq_masonry_enabled: "disabled",
+	suf_fix_aspect_ratio: "preserve",
+	suf_show_drop_caps: ""
+};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.ioslearner.com/wp-content/themes/suffusion/scripts/suffusion.js?ver=3.9.2'></script>
+<script type='text/javascript' src='http://www.ioslearner.com/wp-content/plugins/wp-codebox/js/codebox.js?ver=0.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.ioslearner.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.ioslearner.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='index' title='iOS Learner' href='http://www.ioslearner.com/' />
+<link rel='start' title='How to Run Multiple XCodes in your MAC' href='http://www.ioslearner.com/how-to-run-multiple-xcodes-in-your-mac/' />
+<link rel='prev' title='Implementing UIPageViewController programmatically &#8211; without storyboarding' href='http://www.ioslearner.com/implementing-uipageviewcontroller-programatically-without-storyboarding/' />
+<link rel='canonical' href='http://www.ioslearner.com/generate-pdf-programmatically-iphoneipad/' />
+<link rel='shortlink' href='http://www.ioslearner.com/?p=242' />
+<!-- Start Additional Feeds -->
+<!-- End Additional Feeds -->
+<!-- Include AudioPlayer via Suffusion -->
+<script type="text/javascript">
+/* <![CDATA[ */
+	if (typeof AudioPlayer != 'undefined') {
+		AudioPlayer.setup("http://www.ioslearner.com/wp-content/themes/suffusion/scripts/player.swf", {
+			width: 500,
+			initialvolume: 100,
+			transparentpagebg: "yes",
+			left: "000000",
+			lefticon: "FFFFFF"
+		});
+	}
+/* ]]> */
+</script>
+<!-- /AudioPlayer -->
+
+
+
+</head>
+<body class="single single-post postid-242 single-format-standard light-theme-gray-1">
+    				<div id="wrapper" class="fix">
+					<div id="header-container" class="fix">
+					<div id="header" class="fix">
+			<h2 class="blogtitle"><a href="http://www.ioslearner.com">iOS Learner</a></h2>
+		<!-- /header -->
+ 	<div id="nav" class="tab fix">
+		<div class='col-control left'>
+	<!-- right-header-widgets -->
+	<div id="right-header-widgets" class="warea">
+	
+<form method="get" class="searchform " action="http://www.ioslearner.com/">
+	<input type="text" name="s" class="searchfield"
+			value="Search"
+			onfocus="if (this.value == 'Search') {this.value = '';}"
+			onblur="if (this.value == '') {this.value = 'Search';}"
+			/>
+	<input type="submit" class="searchsubmit" value="" name="searchsubmit" />
+</form>
+	</div>
+	<!-- /right-header-widgets -->
+		</div><!-- /col-control -->
+	</div><!-- /nav -->
+			</div><!-- //#header-container -->
+			<div id="container" class="fix">
+				    <div id="main-col">
+		  	<div id="content">
+	<div class="post-242 post type-post status-publish format-standard hentry category-core-graphics tag-draw-image-in-pdf-context-iphone tag-draw-text-in-pdf-iphone tag-generate-pdf-ios tag-generate-pdf-ipad tag-generate-pdf-iphone tag-generate-pdf-iphone-app tag-generate-pdf-iphone-application tag-generate-pdf-iphone-sdk tag-generate-pdf-programmatically-iphone tag-generate-pdf-xcode tag-pdf-generation-iphone tag-pdf-iphone tag-uigraphicsbeginpdfcontexttofile tag-uigraphicsbeginpdfpagewithinfo category-61-id full-content" id="post-242">
+<div class='title-container fix'>
+	<div class="title">
+		<h1 class="posttitle"><a href='http://www.ioslearner.com/generate-pdf-programmatically-iphoneipad/' class='entry-title' rel='bookmark' title='Generate PDF programmatically in iPhone/iPad SDK' >Generate PDF programmatically in iPhone/iPad SDK</a></h1>
+		<div class="postdata fix">
+					<span class="category"><span class="icon">&nbsp;</span><a href="http://www.ioslearner.com/category/core-graphics/" title="View all posts in Core Graphics" rel="category tag">Core Graphics</a></span>
+							<span class="comments"><span class="icon">&nbsp;</span><a href="#respond">Add comments</a></span>
+					</div><!-- /.postdata -->
+		</div><!-- /.title -->
+		<div class="date"><span class="month">Dec</span> <span
+			class="day">18</span><span class="year">2011</span></div>
+	</div><!-- /.title-container -->
+	<span class='post-format-icon'>&nbsp;</span>		<div class="entry-container fix">
+			<div class="entry fix">
+<p>Recently, I was working on an app where in the user had a provision to generate a pdf, view it, and even give a print using AirPrint.</p>
+<p>So I digged in and started some research on the same. And this is what I found &#8211; There are two ways for generating a pdf.</p>
+<p>1. The first way is to use <strong>Core Graphics </strong>methods to create a pdf graphics context, begin a page(s), end the page, and finally release the context. We can use the following Core Graphics methods:</p>
+<ul>
+<li><strong>CGContextRef CGPDFContextCreateWithURL(CFURLRef url, const CGRect *mediaBox, CFDictionaryRef auxiliaryInfo)</strong></li>
+</ul>
+<ul>
+<li><strong>void CGContextBeginPage(CGContextRef c, const CGRect *mediaBox)</strong></li>
+<li><strong>void CGContextEndPage(CGContextRef c)</strong></li>
+</ul>
+<p>2. The <strong>UIKit framework</strong> also provides provision to generate pdf content. You can check out <a title="this link" href="http://developer.apple.com/library/ios/#documentation/2DDrawing/Conceptual/DrawingPrintingiOS/GeneratingPDF/GeneratingPDF.html#//apple_ref/doc/uid/TP40010156-CH10-SW3">this link</a>.</p>
+<p>I tried both the approaches, and on looking closely, I found that the Core Graphics methods in turn require CoreFoundation methods, which would further require lots of CFReleases and all CF stuff. But the UIKit methods are easier to implement. Moreover, if you are targeting ARC, you have to use __bridge or any such keyword related to Core Foundation, because ARC does not control CoreFoundation objects. So <strong>I&#8217;d personally prefer the methods provided by UIKit</strong>, unless there is a strong need to use the CoreGraphics approach, which till now I didn&#8217;t find.</p>
+<p>So in this tutorial, we will follow the second approach, and generate a pdf, which will ultimately look like:</p>
+<h2 style="text-align: center;"><span style="color: #008000;"><strong><a href="http://www.ioslearner.com/wp-content/uploads/2011/12/Finally-generated-PDF-proframmatically-iPhone-SDK.png"><img class="aligncenter size-full wp-image-256" title="Finally generated PDF programmatically-  iPhone SDK" src="http://www.ioslearner.com/wp-content/uploads/2011/12/Finally-generated-PDF-proframmatically-iPhone-SDK.png" alt="Finally generated PDF programmatically-  iPhone SDK" width="475" height="615" /></a></strong></span></h2>
+<p>Though <strong>if any one is interested in the Core Graphics approach, do let me know, I&#8217;ll try posting on that</strong>!</p>
+<p>So, let&#8217;s get started.<br />
+<span id="more-242"></span>Bump  up your Xcode, and create a new project, and choose <strong>View Based Application</strong> from the project template. We name the project as <strong>PdfGenerationDemo</strong>. We create a button and attach an action to it.</p>
+<p>And we write the following in our action method:</p>
+
+<div class="wp_codebox_msgheader"><span class="right"></span><span class="left"><a href="javascript:;" onclick="javascript:showCodeTxt('p242code1'); return false;">View Code</a> OBJC</span><div class="codebox_clear"></div></div><div class="wp_codebox"><table><tr id="p2421"><td class="code" id="p242code1"><pre class="objc" style="font-family:monospace;"><span style="color: #002200;">-</span> <span style="color: #002200;">&#40;</span>IBAction<span style="color: #002200;">&#41;</span>generatePdfButtonPressed<span style="color: #002200;">:</span><span style="color: #002200;">&#40;</span><span style="color: #a61390;">id</span><span style="color: #002200;">&#41;</span>sender
+<span style="color: #002200;">&#123;</span>
+    pageSize <span style="color: #002200;">=</span> CGSizeMake<span style="color: #002200;">&#40;</span><span style="color: #2400d9;">612</span>, <span style="color: #2400d9;">792</span><span style="color: #002200;">&#41;</span>;
+    <a href="http://developer.apple.com/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/"><span style="color: #400080;">NSString</span></a> <span style="color: #002200;">*</span>fileName <span style="color: #002200;">=</span> <span style="color: #bf1d1a;">@</span><span style="color: #bf1d1a;">&quot;Demo.pdf&quot;</span>;
+    <a href="http://developer.apple.com/documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/"><span style="color: #400080;">NSArray</span></a> <span style="color: #002200;">*</span>paths <span style="color: #002200;">=</span> NSSearchPathForDirectoriesInDomains<span style="color: #002200;">&#40;</span>NSDocumentDirectory, NSUserDomainMask, <span style="color: #a61390;">YES</span><span style="color: #002200;">&#41;</span>;
+    <a href="http://developer.apple.com/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/"><span style="color: #400080;">NSString</span></a> <span style="color: #002200;">*</span>documentsDirectory <span style="color: #002200;">=</span> <span style="color: #002200;">&#91;</span>paths objectAtIndex<span style="color: #002200;">:</span><span style="color: #2400d9;">0</span><span style="color: #002200;">&#93;</span>;
+    <a href="http://developer.apple.com/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/"><span style="color: #400080;">NSString</span></a> <span style="color: #002200;">*</span>pdfFileName <span style="color: #002200;">=</span> <span style="color: #002200;">&#91;</span>documentsDirectory stringByAppendingPathComponent<span style="color: #002200;">:</span>fileName<span style="color: #002200;">&#93;</span>;
+&nbsp;
+    <span style="color: #002200;">&#91;</span>self generatePdfWithFilePath<span style="color: #002200;">:</span>pdfFileName<span style="color: #002200;">&#93;</span>;
+<span style="color: #002200;">&#125;</span></pre></td></tr></table></div>
+
+<p>Here, we call our method, which will do the pdf generation stuff.</p>
+<p>So, let&#8217;s go to this method. We have this code in this method.</p>
+
+<div class="wp_codebox_msgheader"><span class="right"></span><span class="left"><a href="javascript:;" onclick="javascript:showCodeTxt('p242code2'); return false;">View Code</a> OBJC</span><div class="codebox_clear"></div></div><div class="wp_codebox"><table><tr id="p2422"><td class="code" id="p242code2"><pre class="objc" style="font-family:monospace;"><span style="color: #002200;">-</span> <span style="color: #002200;">&#40;</span><span style="color: #a61390;">void</span><span style="color: #002200;">&#41;</span> generatePdfWithFilePath<span style="color: #002200;">:</span> <span style="color: #002200;">&#40;</span><a href="http://developer.apple.com/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/"><span style="color: #400080;">NSString</span></a> <span style="color: #002200;">*</span><span style="color: #002200;">&#41;</span>thefilePath
+<span style="color: #002200;">&#123;</span>
+    UIGraphicsBeginPDFContextToFile<span style="color: #002200;">&#40;</span>thefilePath, CGRectZero, <span style="color: #a61390;">nil</span><span style="color: #002200;">&#41;</span>;
+&nbsp;
+    NSInteger currentPage <span style="color: #002200;">=</span> <span style="color: #2400d9;">0</span>;
+    <span style="color: #a61390;">BOOL</span> done <span style="color: #002200;">=</span> <span style="color: #a61390;">NO</span>;
+    <span style="color: #a61390;">do</span>
+    <span style="color: #002200;">&#123;</span>
+        <span style="color: #11740a; font-style: italic;">// Mark the beginning of a new page.</span>
+        UIGraphicsBeginPDFPageWithInfo<span style="color: #002200;">&#40;</span>CGRectMake<span style="color: #002200;">&#40;</span><span style="color: #2400d9;">0</span>, <span style="color: #2400d9;">0</span>, pageSize.width, pageSize.height<span style="color: #002200;">&#41;</span>, <span style="color: #a61390;">nil</span><span style="color: #002200;">&#41;</span>;
+&nbsp;
+        <span style="color: #11740a; font-style: italic;">// Draw a page number at the bottom of each page.</span>
+        currentPage<span style="color: #002200;">++</span>;
+        <span style="color: #002200;">&#91;</span>self drawPageNumber<span style="color: #002200;">:</span>currentPage<span style="color: #002200;">&#93;</span>;
+&nbsp;
+        <span style="color: #11740a; font-style: italic;">//Draw a border for each page.</span>
+        <span style="color: #002200;">&#91;</span>self drawBorder<span style="color: #002200;">&#93;</span>;
+&nbsp;
+        <span style="color: #11740a; font-style: italic;">//Draw text fo our header.</span>
+        <span style="color: #002200;">&#91;</span>self drawHeader<span style="color: #002200;">&#93;</span>;
+&nbsp;
+        <span style="color: #11740a; font-style: italic;">//Draw a line below the header.</span>
+        <span style="color: #002200;">&#91;</span>self drawLine<span style="color: #002200;">&#93;</span>;
+&nbsp;
+        <span style="color: #11740a; font-style: italic;">//Draw some text for the page.</span>
+        <span style="color: #002200;">&#91;</span>self drawText<span style="color: #002200;">&#93;</span>;
+&nbsp;
+        <span style="color: #11740a; font-style: italic;">//Draw an image</span>
+        <span style="color: #002200;">&#91;</span>self drawImage<span style="color: #002200;">&#93;</span>;
+        done <span style="color: #002200;">=</span> <span style="color: #a61390;">YES</span>;
+    <span style="color: #002200;">&#125;</span>
+    <span style="color: #a61390;">while</span> <span style="color: #002200;">&#40;</span><span style="color: #002200;">!</span>done<span style="color: #002200;">&#41;</span>;
+&nbsp;
+    <span style="color: #11740a; font-style: italic;">// Close the PDF context and write the contents out.</span>
+    UIGraphicsEndPDFContext<span style="color: #002200;">&#40;</span><span style="color: #002200;">&#41;</span>;
+<span style="color: #002200;">&#125;</span></pre></td></tr></table></div>
+
+<p>Basically, we have two methods to create a pdf context:</p>
+<p>1. <strong>void UIGraphicsBeginPDFContextToData (<a href="http://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSMutableData_Class/Reference/NSMutableData.html#//apple_ref/doc/c_ref/NSMutableData">NSMutableData</a> *data, <a href="http://developer.apple.com/library/ios/documentation/GraphicsImaging/Reference/CGGeometry/Reference/reference.html#//apple_ref/doc/c_ref/CGRect">CGRect</a> bounds, <a href="http://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSDictionary_Class/Reference/Reference.html#//apple_ref/doc/c_ref/NSDictionary">NSDictionary</a> *documentInfo)</strong></p>
+<p>2. <strong>BOOL UIGraphicsBeginPDFContextToFile (<a href="http://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/doc/c_ref/NSString">NSString</a> *path, <a href="http://developer.apple.com/library/ios/documentation/GraphicsImaging/Reference/CGGeometry/Reference/reference.html#//apple_ref/doc/c_ref/CGRect">CGRect</a> bounds, <a href="http://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSDictionary_Class/Reference/Reference.html#//apple_ref/doc/c_ref/NSDictionary">NSDictionary</a> *documentInfo)</strong></p>
+<p>If we use the first method, the destination will be an <strong>NSMutableData</strong>. And if we use the second method, the destination is a <strong>file</strong>.</p>
+<p>In our case, <strong>we use the second method, </strong>because we want to create a pdf file. This method takes three arguments. For the first, we give a <strong>path where our pdf will be generated</strong>.</p>
+<p>Then we give our <strong>page size</strong>. <strong>Specifying an empty rectangle (CGRectZero) sets the default page size to 8.5 by 11 inches (612 by 792 points)</strong>.</p>
+<p>Lastly, we have a <strong>documentInfo dictionary</strong>, where we pass in nil. Here, we can specify additional metadata and security information for the PDF, such as the author of the PDF or the password for accessing it.</p>
+<p>So till now, we have created our pdf context, and given the default page. We now need to start a new page for our pdf. We use the method:</p>
+<p><strong>UIGraphicsBeginPDFPageWithInfo(CGRectMake(CGRect bounds, NSDictionary *pageInfo);</strong></p>
+<p>The bounds specify the size and location of our new page. We specify a rect starting at point (0,0) and having a size of 612*792 pixels.</p>
+<p>pageInfo is a dictionary to specify additional information regarding the page. We specify nil here.</p>
+<p>Next, we call methods to draw a page number, border, header, line, text and an image.<strong> I will post the source code for this tutorial and you can catch all those methods there!</strong></p>
+<p>Basically, we are doing 4 main things, and these are usually the main things we require in a pdf.</p>
+<p>Please note that we can use Core Graphics or Core Text to render our content.</p>
+<p>These are:</p>
+<p>1. Drawing a border.</p>
+<p>2. Drawing lines.</p>
+<p>3. Drawing text.</p>
+<p>4. Drawing an image.</p>
+<p>So let&#8217;s see how we do all these.</p>
+<p>1. <strong>Drawing a border: </strong></p>
+
+<div class="wp_codebox_msgheader"><span class="right"></span><span class="left"><a href="javascript:;" onclick="javascript:showCodeTxt('p242code3'); return false;">View Code</a> OBJC</span><div class="codebox_clear"></div></div><div class="wp_codebox"><table><tr id="p2423"><td class="code" id="p242code3"><pre class="objc" style="font-family:monospace;"><span style="color: #002200;">-</span> <span style="color: #002200;">&#40;</span><span style="color: #a61390;">void</span><span style="color: #002200;">&#41;</span> drawBorder
+<span style="color: #002200;">&#123;</span>
+    CGContextRef    currentContext <span style="color: #002200;">=</span> UIGraphicsGetCurrentContext<span style="color: #002200;">&#40;</span><span style="color: #002200;">&#41;</span>;
+    UIColor <span style="color: #002200;">*</span>borderColor <span style="color: #002200;">=</span> <span style="color: #002200;">&#91;</span>UIColor brownColor<span style="color: #002200;">&#93;</span>;
+    CGRect rectFrame <span style="color: #002200;">=</span> CGRectMake<span style="color: #002200;">&#40;</span>kBorderInset, kBorderInset, pageSize.width<span style="color: #002200;">-</span>kBorderInset<span style="color: #002200;">*</span><span style="color: #2400d9;">2</span>, pageSize.height<span style="color: #002200;">-</span>kBorderInset<span style="color: #002200;">*</span><span style="color: #2400d9;">2</span><span style="color: #002200;">&#41;</span>;
+    CGContextSetStrokeColorWithColor<span style="color: #002200;">&#40;</span>currentContext, borderColor.CGColor<span style="color: #002200;">&#41;</span>;
+    CGContextSetLineWidth<span style="color: #002200;">&#40;</span>currentContext, kBorderWidth<span style="color: #002200;">&#41;</span>;
+    CGContextStrokeRect<span style="color: #002200;">&#40;</span>currentContext, rectFrame<span style="color: #002200;">&#41;</span>;
+<span style="color: #002200;">&#125;</span></pre></td></tr></table></div>
+
+<p>Here, we just get the current context, select a color for the border, specify a rect for the border, which has an inset of 20 pixels, and then just stroke the rect using normal Core Graphics.</p>
+<p>2.   <strong>Drawing lines:</strong></p>
+
+<div class="wp_codebox_msgheader"><span class="right"></span><span class="left"><a href="javascript:;" onclick="javascript:showCodeTxt('p242code4'); return false;">View Code</a> OBJC</span><div class="codebox_clear"></div></div><div class="wp_codebox"><table><tr id="p2424"><td class="code" id="p242code4"><pre class="objc" style="font-family:monospace;"><span style="color: #002200;">-</span> <span style="color: #002200;">&#40;</span><span style="color: #a61390;">void</span><span style="color: #002200;">&#41;</span> drawLine
+<span style="color: #002200;">&#123;</span>
+    CGContextRef    currentContext <span style="color: #002200;">=</span> UIGraphicsGetCurrentContext<span style="color: #002200;">&#40;</span><span style="color: #002200;">&#41;</span>;
+&nbsp;
+    CGContextSetLineWidth<span style="color: #002200;">&#40;</span>currentContext, kLineWidth<span style="color: #002200;">&#41;</span>;
+&nbsp;
+    CGContextSetStrokeColorWithColor<span style="color: #002200;">&#40;</span>currentContext, <span style="color: #002200;">&#91;</span>UIColor blueColor<span style="color: #002200;">&#93;</span>.CGColor<span style="color: #002200;">&#41;</span>;
+&nbsp;
+    CGPoint startPoint <span style="color: #002200;">=</span> CGPointMake<span style="color: #002200;">&#40;</span>kMarginInset <span style="color: #002200;">+</span> kBorderInset, kMarginInset <span style="color: #002200;">+</span> kBorderInset <span style="color: #002200;">+</span> <span style="color: #2400d9;">40.0</span><span style="color: #002200;">&#41;</span>;
+    CGPoint endPoint <span style="color: #002200;">=</span> CGPointMake<span style="color: #002200;">&#40;</span>pageSize.width <span style="color: #002200;">-</span> <span style="color: #2400d9;">2</span><span style="color: #002200;">*</span>kMarginInset <span style="color: #002200;">-</span><span style="color: #2400d9;">2</span><span style="color: #002200;">*</span>kBorderInset, kMarginInset <span style="color: #002200;">+</span> kBorderInset <span style="color: #002200;">+</span> <span style="color: #2400d9;">40.0</span><span style="color: #002200;">&#41;</span>;
+&nbsp;
+    CGContextBeginPath<span style="color: #002200;">&#40;</span>currentContext<span style="color: #002200;">&#41;</span>;
+    CGContextMoveToPoint<span style="color: #002200;">&#40;</span>currentContext, startPoint.x, startPoint.y<span style="color: #002200;">&#41;</span>;
+    CGContextAddLineToPoint<span style="color: #002200;">&#40;</span>currentContext, endPoint.x, endPoint.y<span style="color: #002200;">&#41;</span>;
+&nbsp;
+    CGContextClosePath<span style="color: #002200;">&#40;</span>currentContext<span style="color: #002200;">&#41;</span>;
+    CGContextDrawPath<span style="color: #002200;">&#40;</span>currentContext, kCGPathFillStroke<span style="color: #002200;">&#41;</span>;
+<span style="color: #002200;">&#125;</span></pre></td></tr></table></div>
+
+<p>Here too, we get the current context, set the line width and stroke color, specify the start and end points, move to the start point, add a line to the end point, and finally draw the path.</p>
+<p>3. <strong>Drawing text:</strong></p>
+
+<div class="wp_codebox_msgheader"><span class="right"></span><span class="left"><a href="javascript:;" onclick="javascript:showCodeTxt('p242code5'); return false;">View Code</a> OBJC</span><div class="codebox_clear"></div></div><div class="wp_codebox"><table><tr id="p2425"><td class="code" id="p242code5"><pre class="objc" style="font-family:monospace;"><span style="color: #002200;">-</span> <span style="color: #002200;">&#40;</span><span style="color: #a61390;">void</span><span style="color: #002200;">&#41;</span> drawText
+<span style="color: #002200;">&#123;</span>
+    CGContextRef    currentContext <span style="color: #002200;">=</span> UIGraphicsGetCurrentContext<span style="color: #002200;">&#40;</span><span style="color: #002200;">&#41;</span>;
+    CGContextSetRGBFillColor<span style="color: #002200;">&#40;</span>currentContext, <span style="color: #2400d9;">0.0</span>, <span style="color: #2400d9;">0.0</span>, <span style="color: #2400d9;">0.0</span>, <span style="color: #2400d9;">1.0</span><span style="color: #002200;">&#41;</span>;
+&nbsp;
+    <a href="http://developer.apple.com/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/"><span style="color: #400080;">NSString</span></a> <span style="color: #002200;">*</span>textToDraw <span style="color: #002200;">=</span> <span style="color: #bf1d1a;">@</span><span style="color: #bf1d1a;">&quot;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.&quot;</span>;
+&nbsp;
+    UIFont <span style="color: #002200;">*</span>font <span style="color: #002200;">=</span> <span style="color: #002200;">&#91;</span>UIFont systemFontOfSize<span style="color: #002200;">:</span><span style="color: #2400d9;">14.0</span><span style="color: #002200;">&#93;</span>;
+&nbsp;
+    CGSize stringSize <span style="color: #002200;">=</span> <span style="color: #002200;">&#91;</span>textToDraw sizeWithFont<span style="color: #002200;">:</span>font
+                               constrainedToSize<span style="color: #002200;">:</span>CGSizeMake<span style="color: #002200;">&#40;</span>pageSize.width <span style="color: #002200;">-</span> <span style="color: #2400d9;">2</span><span style="color: #002200;">*</span>kBorderInset<span style="color: #002200;">-</span><span style="color: #2400d9;">2</span><span style="color: #002200;">*</span>kMarginInset, pageSize.height <span style="color: #002200;">-</span> <span style="color: #2400d9;">2</span><span style="color: #002200;">*</span>kBorderInset <span style="color: #002200;">-</span> <span style="color: #2400d9;">2</span><span style="color: #002200;">*</span>kMarginInset<span style="color: #002200;">&#41;</span>
+                                   lineBreakMode<span style="color: #002200;">:</span>UILineBreakModeWordWrap<span style="color: #002200;">&#93;</span>;
+&nbsp;
+    CGRect renderingRect <span style="color: #002200;">=</span> CGRectMake<span style="color: #002200;">&#40;</span>kBorderInset <span style="color: #002200;">+</span> kMarginInset, kBorderInset <span style="color: #002200;">+</span> kMarginInset <span style="color: #002200;">+</span> <span style="color: #2400d9;">50.0</span>, pageSize.width <span style="color: #002200;">-</span> <span style="color: #2400d9;">2</span><span style="color: #002200;">*</span>kBorderInset <span style="color: #002200;">-</span> <span style="color: #2400d9;">2</span><span style="color: #002200;">*</span>kMarginInset, stringSize.height<span style="color: #002200;">&#41;</span>;
+&nbsp;
+    <span style="color: #002200;">&#91;</span>textToDraw drawInRect<span style="color: #002200;">:</span>renderingRect
+                  withFont<span style="color: #002200;">:</span>font
+             lineBreakMode<span style="color: #002200;">:</span>UILineBreakModeWordWrap
+                 alignment<span style="color: #002200;">:</span>UITextAlignmentLeft<span style="color: #002200;">&#93;</span>;
+<span style="color: #002200;">&#125;</span></pre></td></tr></table></div>
+
+<p>Here, we first calculate the size of the string we need to draw. We use the method <strong>sizeWithFont: constrainedToSize: lineBreakMode:</strong>. We give the font we desire. Then we give the argument for constrainedToSize. This is the rect that we want to constrain our string to i.e. the calculated string rect would not increase the value we provide for this argument. Here, we give the page size minus the border inset minus the margin inset, the margin inset being the inset between the border and the point at which we want to start our text. The lineBreakMode we give is UILineBreakModeWordWrap.</p>
+<p>This method will return the bounding rect for our string i.e. it will automatically calculate the rect for our given string according to the font size we have given, constraining it to the size we have given for the constrainedToSize argument. This point is really important. Here, according to our business logic, we might even have a string that returns a rect that is more than the constrainedToSize value we have given. In that case, we might have to break our string two that it can fit into the rect in constrainedToSize method.</p>
+<p>At last, we use NSString&#8217;s <strong>drawInRect: withFont: LineBreakMode: alignment: </strong>to draw our string into the rect we had earlier calculated for our string.</p>
+<p>4. <strong>Drawing an image: </strong></p>
+
+<div class="wp_codebox_msgheader"><span class="right"></span><span class="left"><a href="javascript:;" onclick="javascript:showCodeTxt('p242code6'); return false;">View Code</a> OBJC</span><div class="codebox_clear"></div></div><div class="wp_codebox"><table><tr id="p2426"><td class="code" id="p242code6"><pre class="objc" style="font-family:monospace;"><span style="color: #002200;">-</span> <span style="color: #002200;">&#40;</span><span style="color: #a61390;">void</span><span style="color: #002200;">&#41;</span> drawImage
+<span style="color: #002200;">&#123;</span>
+    UIImage <span style="color: #002200;">*</span> demoImage <span style="color: #002200;">=</span> <span style="color: #002200;">&#91;</span>UIImage imageNamed<span style="color: #002200;">:</span><span style="color: #bf1d1a;">@</span><span style="color: #bf1d1a;">&quot;demo.png&quot;</span><span style="color: #002200;">&#93;</span>;
+    <span style="color: #002200;">&#91;</span>demoImage drawInRect<span style="color: #002200;">:</span>CGRectMake<span style="color: #002200;">&#40;</span> <span style="color: #002200;">&#40;</span>pageSize.width <span style="color: #002200;">-</span> demoImage.size.width<span style="color: #002200;">/</span><span style="color: #2400d9;">2</span><span style="color: #002200;">&#41;</span><span style="color: #002200;">/</span><span style="color: #2400d9;">2</span>, <span style="color: #2400d9;">350</span>, demoImage.size.width<span style="color: #002200;">/</span><span style="color: #2400d9;">2</span>, demoImage.size.height<span style="color: #002200;">/</span><span style="color: #2400d9;">2</span><span style="color: #002200;">&#41;</span><span style="color: #002200;">&#93;</span>;
+<span style="color: #002200;">&#125;</span></pre></td></tr></table></div>
+
+<p>Here too, we use UIImage&#8217;s <strong>drawInRect:</strong> method to draw the image to our context, passing in the rect in which to render our image.</p>
+<p>And finally doing all our pdf generation stuff, we close our context by calling <strong>UIGraphicsEndPDFContext() </strong>method.</p>
+<p><strong><span style="text-decoration: underline; color: #008000;">Quick Tip</span>:</strong> We can  even generate a multi page pdf- All we need to do is take a variable, and while rendering content, update that variable. If our vertical height is equal to the height of our page, we can increment the pageNumber, and start a new page. Here, for demo purposes, we are just generating a single page pdf.</p>
+<p>As usual, you can grab the source code for the demo - <a href="http://www.ioslearner.com/wp-content/uploads/2011/12/PdfGenerationDemo.zip">PdfGenerationDemo iPhone</a>.</p>
+<p>Happy Coding <img src='http://www.ioslearner.com/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+			</div><!--/entry -->
+		</div><!-- .entry-container -->
+<div class="post-footer postdata fix">
+<span class="author"><span class="icon">&nbsp;</span>Posted by <a href="http://www.ioslearner.com/author/bunnyuppal/">iOSLearner</a> at 7:24 pm</span>		<span class="tags"><span class="icon">&nbsp;</span>Tagged with: <a href="http://www.ioslearner.com/tag/draw-image-in-pdf-context-iphone/" rel="tag">draw image in pdf context iPhone</a>, <a href="http://www.ioslearner.com/tag/draw-text-in-pdf-iphone/" rel="tag">draw text in pdf iPhone</a>, <a href="http://www.ioslearner.com/tag/generate-pdf-ios/" rel="tag">generate pdf iOS</a>, <a href="http://www.ioslearner.com/tag/generate-pdf-ipad/" rel="tag">generate pdf ipad</a>, <a href="http://www.ioslearner.com/tag/generate-pdf-iphone/" rel="tag">generate pdf iphone</a>, <a href="http://www.ioslearner.com/tag/generate-pdf-iphone-app/" rel="tag">generate pdf iPhone app</a>, <a href="http://www.ioslearner.com/tag/generate-pdf-iphone-application/" rel="tag">generate pdf iPhone application</a>, <a href="http://www.ioslearner.com/tag/generate-pdf-iphone-sdk/" rel="tag">Generate pdf iPhone SDK</a>, <a href="http://www.ioslearner.com/tag/generate-pdf-programmatically-iphone/" rel="tag">generate pdf programmatically iPhone</a>, <a href="http://www.ioslearner.com/tag/generate-pdf-xcode/" rel="tag">generate pdf XCode</a>, <a href="http://www.ioslearner.com/tag/pdf-generation-iphone/" rel="tag">pdf generation iPhone</a>, <a href="http://www.ioslearner.com/tag/pdf-iphone/" rel="tag">pdf iPhone</a>, <a href="http://www.ioslearner.com/tag/uigraphicsbeginpdfcontexttofile/" rel="tag">UIGraphicsBeginPDFContextToFile</a>, <a href="http://www.ioslearner.com/tag/uigraphicsbeginpdfpagewithinfo/" rel="tag">UIGraphicsBeginPDFPageWithInfo</a><br /></span>
+	</div><!-- .post-footer -->
+<div id="comments">
+<h3 class="comments"><span class="icon">&nbsp;</span>
+	6 Responses to &#8220;Generate PDF programmatically in iPhone/iPad SDK&#8221;</h3>
+<ol class="commentlist">
+	<li id="comment-20" class="pingback even thread-even depth-1">
+				<div id="div-comment-20" class="comment-body">
+			<div class="comment-author fix vcard">
+							<div class="comment-author-link">
+					<cite class="fn"><a href='http://www.iphonedevsdk.com/forum/iphone-sdk-development/18657-generating-pdf-programatically.html#post396342' rel='external nofollow' class='url'>Generating PDF Programatically - iPhone Dev SDK Forum</a></cite> <span class="says">says:</span>				</div>
+				<div class="comment-meta commentmetadata"><a href="http://www.ioslearner.com/generate-pdf-programmatically-iphoneipad/#comment-20">
+				December 22, 2011 at 6:49 am</a>				</div>
+
+			</div>
+	
+			<p><a href="http://www.iphonedevsdk.com/forum/iphone-sdk-development/18657-generating-pdf-programatically.html#post396342" rel="nofollow">http://www.iphonedevsdk.com/forum/iphone-sdk-development/18657-generating-pdf-programatically.html#post396342</a><br />
+[...] You can use Core Graphics or UIKit methods to generate a pdf in iPhone SDK. Check this tutorial./ [...]</p>
+
+			</div>
+
+			<div class="reply">
+						</div>
+
+
+
+		
+	</li>
+	<li id="comment-22" class="comment odd alt thread-odd thread-alt depth-1">
+				<div id="div-comment-22" class="comment-body">
+			<div class="comment-author fix vcard">
+			<img alt='' src='http://0.gravatar.com/avatar/c9cfc80f3cd283a41567b038df572ee6?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />				<div class="comment-author-link">
+					<cite class="fn">Nagaraj</cite> <span class="says">says:</span>				</div>
+				<div class="comment-meta commentmetadata"><a href="http://www.ioslearner.com/generate-pdf-programmatically-iphoneipad/#comment-22">
+				December 24, 2011 at 9:54 am</a>				</div>
+
+			</div>
+	
+			<p>Hi,<br />
+great tutorial&#8230;. I could even generate a multipage pdf.<br />
+I&#8217;ve a problem in justifying the text. there are no options in UITextAlignment. Please help me</p>
+<p>Thanks in advance</p>
+
+			</div>
+
+			<div class="reply">
+			<a class='comment-reply-link' href='/generate-pdf-programmatically-iphoneipad/?replytocom=22#respond' onclick='return addComment.moveForm("comment-22", "22", "respond", "242")'>Reply</a>			</div>
+
+
+
+		
+	</li>
+	<li id="comment-23" class="comment byuser comment-author-bunnyuppal bypostauthor even thread-even depth-1">
+				<div id="div-comment-23" class="comment-body">
+			<div class="comment-author fix vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/183c498d5d36f1f77d71e6c58b4d50f4?s=48&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />				<div class="comment-author-link">
+					<cite class="fn">iOSLearner</cite> <span class="says">says:</span>				</div>
+				<div class="comment-meta commentmetadata"><a href="http://www.ioslearner.com/generate-pdf-programmatically-iphoneipad/#comment-23">
+				December 24, 2011 at 12:26 pm</a>				</div>
+
+			</div>
+	
+			<p>Hi Nagaraj, How exactly you want to justify the text?  If you want to specify how the text needs to be aligned, there are 3 options, UITextAlignmentLeft, UITextAlignmentCenter andUITextAlignmentRight. These can be used. In the &#8220;drawText&#8221; method,  you can specify UITextAlignmentRight, and note the difference.</p>
+
+			</div>
+
+			<div class="reply">
+			<a class='comment-reply-link' href='/generate-pdf-programmatically-iphoneipad/?replytocom=23#respond' onclick='return addComment.moveForm("comment-23", "23", "respond", "242")'>Reply</a>			</div>
+
+
+
+		
+	</li>
+	<li id="comment-24" class="comment odd alt thread-odd thread-alt depth-1">
+				<div id="div-comment-24" class="comment-body">
+			<div class="comment-author fix vcard">
+			<img alt='' src='http://0.gravatar.com/avatar/c9cfc80f3cd283a41567b038df572ee6?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />				<div class="comment-author-link">
+					<cite class="fn">Nagaraj</cite> <span class="says">says:</span>				</div>
+				<div class="comment-meta commentmetadata"><a href="http://www.ioslearner.com/generate-pdf-programmatically-iphoneipad/#comment-24">
+				December 26, 2011 at 12:55 pm</a>				</div>
+
+			</div>
+	
+			<p>Hi,<br />
+Thanks for the reply. I want &#8216;justified text alignment&#8217; which is not provided by apple as of now.</p>
+
+			</div>
+
+			<div class="reply">
+			<a class='comment-reply-link' href='/generate-pdf-programmatically-iphoneipad/?replytocom=24#respond' onclick='return addComment.moveForm("comment-24", "24", "respond", "242")'>Reply</a>			</div>
+
+
+
+		
+	</li>
+	<li id="comment-25" class="comment even thread-even depth-1">
+				<div id="div-comment-25" class="comment-body">
+			<div class="comment-author fix vcard">
+			<img alt='' src='http://0.gravatar.com/avatar/c9cfc80f3cd283a41567b038df572ee6?s=48&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />				<div class="comment-author-link">
+					<cite class="fn">Nagaraj</cite> <span class="says">says:</span>				</div>
+				<div class="comment-meta commentmetadata"><a href="http://www.ioslearner.com/generate-pdf-programmatically-iphoneipad/#comment-25">
+				December 26, 2011 at 1:21 pm</a>				</div>
+
+			</div>
+	
+			<p>how can i write html into pdf?</p>
+
+			</div>
+
+			<div class="reply">
+			<a class='comment-reply-link' href='/generate-pdf-programmatically-iphoneipad/?replytocom=25#respond' onclick='return addComment.moveForm("comment-25", "25", "respond", "242")'>Reply</a>			</div>
+
+
+
+		
+	</li>
+	<li id="comment-27" class="comment byuser comment-author-bunnyuppal bypostauthor odd alt thread-odd thread-alt depth-1">
+				<div id="div-comment-27" class="comment-body">
+			<div class="comment-author fix vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/183c498d5d36f1f77d71e6c58b4d50f4?s=48&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />				<div class="comment-author-link">
+					<cite class="fn">iOSLearner</cite> <span class="says">says:</span>				</div>
+				<div class="comment-meta commentmetadata"><a href="http://www.ioslearner.com/generate-pdf-programmatically-iphoneipad/#comment-27">
+				December 27, 2011 at 4:35 pm</a>				</div>
+
+			</div>
+	
+			<p>I have not tried writing an html into a pdf. But, the option that seems feasible to me is to write the html into a UIWebview, and then write the web view into the pdf context. Hope that helps. I will try posting on this, once i get time.</p>
+
+			</div>
+
+			<div class="reply">
+			<a class='comment-reply-link' href='/generate-pdf-programmatically-iphoneipad/?replytocom=27#respond' onclick='return addComment.moveForm("comment-27", "27", "respond", "242")'>Reply</a>			</div>
+
+
+
+		
+	</li>
+</ol>
+<div class="navigation fix">
+	<div class="alignleft"></div>
+	<div class="alignright"></div>
+</div>
+								<div id="respond">
+				<h3 id="reply-title"><span class="icon">&nbsp;</span>Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/generate-pdf-programmatically-iphoneipad/#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.ioslearner.com/wp-comments-post.php" method="post" id="commentform">
+																			<span></span>							
+					<p>
+						<label for='author' class='suf-comment-label'>Name</label>
+						<input type='text' name='author' id='author' class='textarea' value='' size='28' tabindex='1' /> (required)
+					</p>
+
+					<p>
+						<label for='email' class='suf-comment-label'>E-mail</label>
+						<input type='text' name='email' id='email' value='' size='28' tabindex='2' class='textarea' /> (required)
+					</p>
+
+					<p>
+						<label for='url' class='suf-comment-label'>URI</label>
+						<input type='text' name='url' id='url' value='' size='28' tabindex='3' class='textarea' />
+					</p>
+												
+					<p>
+						<label for='comment' class='textarea suf-comment-label'>Your Comment</label>
+						<textarea name='comment' id='comment' cols='60' rows='10' tabindex='4' class='textarea'></textarea>
+					</p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Submit Comment" />
+							<input type='hidden' name='comment_post_ID' value='242' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+											</form>
+							</div><!-- #respond -->
+						</div>	</div><!--/post -->
+<div class='post-nav'>
+<table>
+<tr>
+	<td class='previous'></td>
+	<td class='next'></td>
+</tr>
+</table>
+</div>
+      </div><!-- content -->
+    </div><!-- main col -->
+
+	</div><!-- /container -->
+
+</div><!--/wrapper -->
+<div id="su-footer-links" style="text-align: center;"></div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26930030-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</body>
+
+
+</html>
