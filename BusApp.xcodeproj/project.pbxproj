@@ -68,6 +68,13 @@
 		3CBC888716FD862600066C54 /* BusDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBC888616FD862600066C54 /* BusDBManager.m */; };
 		3CBCCA5816FEB80700FA2FBF /* Fenner.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CBCCA5616FEB80700FA2FBF /* Fenner.png */; };
 		3CBCCA5916FEB80700FA2FBF /* ToUni.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CBCCA5716FEB80700FA2FBF /* ToUni.png */; };
+		CEF103CC1A792F8F00D3ACB4 /* ECPercentDrivenInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF103BE1A792F8F00D3ACB4 /* ECPercentDrivenInteractiveTransition.m */; };
+		CEF103CD1A792F8F00D3ACB4 /* ECSlidingAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF103C01A792F8F00D3ACB4 /* ECSlidingAnimationController.m */; };
+		CEF103CE1A792F8F00D3ACB4 /* ECSlidingInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF103C31A792F8F00D3ACB4 /* ECSlidingInteractiveTransition.m */; };
+		CEF103CF1A792F8F00D3ACB4 /* ECSlidingSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF103C51A792F8F00D3ACB4 /* ECSlidingSegue.m */; };
+		CEF103D01A792F8F00D3ACB4 /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF103C71A792F8F00D3ACB4 /* ECSlidingViewController.m */; };
+		CEF103D11A792F8F00D3ACB4 /* MEZoomAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF103C91A792F8F00D3ACB4 /* MEZoomAnimationController.m */; };
+		CEF103D21A792F8F00D3ACB4 /* UIViewController+ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF103CB1A792F8F00D3ACB4 /* UIViewController+ECSlidingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -156,6 +163,21 @@
 		3CBC888616FD862600066C54 /* BusDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = BusDBManager.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		3CBCCA5616FEB80700FA2FBF /* Fenner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Fenner.png; path = BusApp/Resource/Fenner.png; sourceTree = "<group>"; };
 		3CBCCA5716FEB80700FA2FBF /* ToUni.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ToUni.png; path = BusApp/Resource/ToUni.png; sourceTree = "<group>"; };
+		CEF103BD1A792F8F00D3ACB4 /* ECPercentDrivenInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECPercentDrivenInteractiveTransition.h; sourceTree = "<group>"; };
+		CEF103BE1A792F8F00D3ACB4 /* ECPercentDrivenInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECPercentDrivenInteractiveTransition.m; sourceTree = "<group>"; };
+		CEF103BF1A792F8F00D3ACB4 /* ECSlidingAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingAnimationController.h; sourceTree = "<group>"; };
+		CEF103C01A792F8F00D3ACB4 /* ECSlidingAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingAnimationController.m; sourceTree = "<group>"; };
+		CEF103C11A792F8F00D3ACB4 /* ECSlidingConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingConstants.h; sourceTree = "<group>"; };
+		CEF103C21A792F8F00D3ACB4 /* ECSlidingInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingInteractiveTransition.h; sourceTree = "<group>"; };
+		CEF103C31A792F8F00D3ACB4 /* ECSlidingInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingInteractiveTransition.m; sourceTree = "<group>"; };
+		CEF103C41A792F8F00D3ACB4 /* ECSlidingSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingSegue.h; sourceTree = "<group>"; };
+		CEF103C51A792F8F00D3ACB4 /* ECSlidingSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingSegue.m; sourceTree = "<group>"; };
+		CEF103C61A792F8F00D3ACB4 /* ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingViewController.h; sourceTree = "<group>"; };
+		CEF103C71A792F8F00D3ACB4 /* ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingViewController.m; sourceTree = "<group>"; };
+		CEF103C81A792F8F00D3ACB4 /* MEZoomAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEZoomAnimationController.h; sourceTree = "<group>"; };
+		CEF103C91A792F8F00D3ACB4 /* MEZoomAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEZoomAnimationController.m; sourceTree = "<group>"; };
+		CEF103CA1A792F8F00D3ACB4 /* UIViewController+ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ECSlidingViewController.h"; sourceTree = "<group>"; };
+		CEF103CB1A792F8F00D3ACB4 /* UIViewController+ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ECSlidingViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				33AE3700194D7CB000722618 /* info.png */,
+				CEF103BC1A792F8F00D3ACB4 /* ECSlidingViewController */,
 				33562EFB194D639700D2703A /* Flurry */,
 				33B920ED1841087000FC656A /* iOS 7 29.png */,
 				33B920EC1841081E00FC656A /* iOS 58.png */,
@@ -372,6 +395,28 @@
 			path = BusApp/DB;
 			sourceTree = "<group>";
 		};
+		CEF103BC1A792F8F00D3ACB4 /* ECSlidingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CEF103BD1A792F8F00D3ACB4 /* ECPercentDrivenInteractiveTransition.h */,
+				CEF103BE1A792F8F00D3ACB4 /* ECPercentDrivenInteractiveTransition.m */,
+				CEF103BF1A792F8F00D3ACB4 /* ECSlidingAnimationController.h */,
+				CEF103C01A792F8F00D3ACB4 /* ECSlidingAnimationController.m */,
+				CEF103C11A792F8F00D3ACB4 /* ECSlidingConstants.h */,
+				CEF103C21A792F8F00D3ACB4 /* ECSlidingInteractiveTransition.h */,
+				CEF103C31A792F8F00D3ACB4 /* ECSlidingInteractiveTransition.m */,
+				CEF103C41A792F8F00D3ACB4 /* ECSlidingSegue.h */,
+				CEF103C51A792F8F00D3ACB4 /* ECSlidingSegue.m */,
+				CEF103C61A792F8F00D3ACB4 /* ECSlidingViewController.h */,
+				CEF103C71A792F8F00D3ACB4 /* ECSlidingViewController.m */,
+				CEF103C81A792F8F00D3ACB4 /* MEZoomAnimationController.h */,
+				CEF103C91A792F8F00D3ACB4 /* MEZoomAnimationController.m */,
+				CEF103CA1A792F8F00D3ACB4 /* UIViewController+ECSlidingViewController.h */,
+				CEF103CB1A792F8F00D3ACB4 /* UIViewController+ECSlidingViewController.m */,
+			);
+			path = ECSlidingViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -475,16 +520,23 @@
 			files = (
 				3C053C5D16F7C55C00FA1191 /* main.m in Sources */,
 				3C053C6116F7C55C00FA1191 /* AppDelegate.m in Sources */,
+				CEF103D21A792F8F00D3ACB4 /* UIViewController+ECSlidingViewController.m in Sources */,
 				3C053C6A16F7C55C00FA1191 /* FirstViewController.m in Sources */,
 				3C053C7116F7C55C00FA1191 /* SecondViewController.m in Sources */,
 				3C053C8B16F7C5F700FA1191 /* FMDatabase.m in Sources */,
+				CEF103CC1A792F8F00D3ACB4 /* ECPercentDrivenInteractiveTransition.m in Sources */,
+				CEF103D11A792F8F00D3ACB4 /* MEZoomAnimationController.m in Sources */,
 				3C053C8C16F7C5F700FA1191 /* FMDatabaseAdditions.m in Sources */,
 				3C053C8D16F7C5F700FA1191 /* FMResultSet.m in Sources */,
 				3C053C9216F7C70700FA1191 /* Times2ViewController.m in Sources */,
 				3C053C9B16F7EA3900FA1191 /* BusInfoManager.m in Sources */,
+				CEF103CF1A792F8F00D3ACB4 /* ECSlidingSegue.m in Sources */,
+				CEF103D01A792F8F00D3ACB4 /* ECSlidingViewController.m in Sources */,
 				3C053CA616F7FAA700FA1191 /* InfoViewController.m in Sources */,
 				3CBC888716FD862600066C54 /* BusDBManager.m in Sources */,
+				CEF103CE1A792F8F00D3ACB4 /* ECSlidingInteractiveTransition.m in Sources */,
 				330F24F6173E8D4D00C50F95 /* jquery.js in Sources */,
+				CEF103CD1A792F8F00D3ACB4 /* ECSlidingAnimationController.m in Sources */,
 				330F24F7173E8D4D00C50F95 /* jquery.mobile-1.0.min.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
