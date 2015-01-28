@@ -15,6 +15,8 @@
 
 @interface FirstViewController ()
 
+@property (weak) IBOutlet UIButton *menuButton;
+
 @end
 
 @implementation TimeTable
@@ -39,6 +41,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.menuButton addTarget:self action:@selector(menuButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     
     [self setNeedsStatusBarAppearanceUpdate];
     
@@ -105,8 +109,8 @@
 -(void)GetCurrentTime
 {
     NSDate *today = [NSDate date];
-    NSCalendar *gregorian = [[[NSCalendar alloc]
-                              initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
+    NSCalendar *gregorian = [[NSCalendar alloc]
+                              initWithCalendarIdentifier:NSGregorianCalendar];
     NSDateComponents *components =
     [gregorian components:(NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:today];
     
@@ -133,7 +137,7 @@
     NSLog(@"RowIndex ==== %d", [indexPath row]);
     if(cell == nil)
     {
-        cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier];
 //        cell = [[UITableVIewCell alloc] init]
         
           // create a custom label:                                        x    y   width  height
@@ -154,7 +158,6 @@
             [routeLabel setTextAlignment:NSTextAlignmentCenter];
             // custom views should be added as subviews of the cell's contentView:
             [cell.contentView addSubview:routeLabel];
-            [routeLabel release];
             
             
             UILabel *timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 45.0, 320, 45)];
@@ -166,7 +169,6 @@
             [timeLabel setTextAlignment:NSTextAlignmentCenter];
             // custom views should be added as subviews of the cell's contentView:
             [cell.contentView addSubview:timeLabel];
-            [timeLabel release];
         }
         else
         {
@@ -179,7 +181,6 @@
             [routeLabel setTextAlignment:NSTextAlignmentLeft];
             // custom views should be added as subviews of the cell's contentView:
             [cell.contentView addSubview:routeLabel];
-            [routeLabel release];
             
            
             UILabel *timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(80, 10.0, 240.0, 25.0)];
@@ -191,7 +192,6 @@
             [timeLabel setTextAlignment:NSTextAlignmentLeft];
             // custom views should be added as subviews of the cell's contentView:
             [cell.contentView addSubview:timeLabel];
-            [timeLabel release];
         }
         
       
@@ -226,7 +226,6 @@
     if(m_arrayTime != nil)
     {
         [m_arrayTime removeAllObjects];
-        [m_arrayTime release];
     }
     AppDelegate* appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     m_arrayTime = [[appDelegate m_pBusDBManager] GetReminTimeList:m_nCurrentHour minute:m_nCurrentMin];
@@ -250,9 +249,7 @@
 
 -(void)dealloc
 {
-    [super dealloc];
     [m_arrayTime removeAllObjects];
-    [m_arrayTime release];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {

@@ -63,7 +63,6 @@
         infoText.nID = nId;
         infoText.szText = name;
         [m_arrayTextList addObject:infoText];
-        [infoText release];
 
         NSLog(@"User: %@ - %d",name, nId);
     }
@@ -143,7 +142,6 @@
         infoTime.nMin = nMin;
         infoTime.nHour = nHour;
         [array addObject: infoTime];
-        [infoTime release];
         
         NSLog(@"User:%d ---- %d : %d",nID, nHour, nMin);
         nCount ++;
@@ -175,7 +173,6 @@
         infoTime.nMin = nMin;
         infoTime.nHour = nHour;
         [array addObject:infoTime];
-        [infoTime release];
         NSLog(@"User: %d : %02d",nHour, nMin);
         nCount ++;
     }
@@ -206,7 +203,6 @@
         infoText.nHour = nHour;
         infoText.nMin = nMin;
         [array addObject:infoText];
-        [infoText release];
         NSLog(@"Stop: %d- %d",nHour, nMin);
         nCount ++;
     }
@@ -238,7 +234,6 @@
         infoText.nHour = nHour;
         infoText.nMin = nMin;
         [array addObject:infoText];
-        [infoText release];
         NSLog(@"Stop: %d- %d",nHour, nMin);
         nCount ++;
     }
@@ -252,13 +247,9 @@
 -(void)dealloc
 {
     [m_arrayTimeListText removeAllObjects];
-    [m_arrayTimeListText release];
     [m_arrayTimeList removeAllObjects];
-    [m_arrayTimeList release];
     [m_arrayTextList removeAllObjects];
-    [m_arrayTextList release];
 
-    [super dealloc];
 }
 
 @end

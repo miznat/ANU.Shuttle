@@ -24,7 +24,7 @@
 #import "ECPercentDrivenInteractiveTransition.h"
 
 @interface ECPercentDrivenInteractiveTransition ()
-@property (nonatomic, assign) id<UIViewControllerContextTransitioning> transitionContext;
+@property (nonatomic, weak) id<UIViewControllerContextTransitioning> transitionContext;
 @property (nonatomic, assign) BOOL isActive;
 - (void)removeAnimationsRecursively:(CALayer *)layer;
 @end

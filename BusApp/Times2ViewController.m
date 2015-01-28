@@ -14,6 +14,8 @@
 
 @interface Times2ViewController ()
 
+@property (weak) IBOutlet UIButton *menuButton;
+
 @end
 
 @implementation Times2ViewController
@@ -33,6 +35,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+     [self.menuButton addTarget:self action:@selector(menuButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     
     [self setNeedsStatusBarAppearanceUpdate];
     
@@ -93,7 +97,6 @@
     if(m_arrayShow)
     {
         [m_arrayShow removeAllObjects];
-        [m_arrayShow release];
     }
     AppDelegate* appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     if(m_nSelectedIdx == 0)
@@ -105,8 +108,8 @@
 -(void)GetCurrentTime
 {
     NSDate *today = [NSDate date];
-    NSCalendar *gregorian = [[[NSCalendar alloc]
-                              initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
+    NSCalendar *gregorian = [[NSCalendar alloc]
+                              initWithCalendarIdentifier:NSGregorianCalendar];
     NSDateComponents *components =
     [gregorian components:(NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:today];
     
@@ -139,8 +142,6 @@
 {
     
     [m_arrayShow removeAllObjects];
-    [m_arrayShow release];
-    [super dealloc];
 }
 
 
@@ -171,7 +172,7 @@
     
     if(cell == nil)
     {
-        cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier];
         [cell setBackgroundColor:[UIColor blackColor]];
         UILabel *dataLabel;
         UIColor* timecolor = [UIColor colorWithRed:8/255.0 green:174/255.0f blue:243/255.0f alpha:1.0f];
@@ -195,7 +196,6 @@
         [dataLabel setTextAlignment:NSTextAlignmentCenter];
         // custom views should be added as subviews of the cell's contentView:
         [cell.contentView addSubview:dataLabel];
-        [dataLabel release];
     }
     if([m_arrayShow count] > 0)
     {

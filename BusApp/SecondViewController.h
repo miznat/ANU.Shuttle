@@ -11,7 +11,7 @@
 
 @interface SecondViewController : GAITrackedViewController<UITableViewDataSource, UITableViewDelegate>
 {
-    NSMutableArray* m_pArrayTimes;
+    NSMutableArray* __weak m_pArrayTimes;
     IBOutlet UIView* m_detailView;
     IBOutlet UITableView* m_detailTableView;
     IBOutlet UITableView* m_OrgTableView;
@@ -21,7 +21,7 @@
     int m_nSelectedIdx;
 }
 
-@property(nonatomic, assign)     NSMutableArray* m_pArrayTimes;
+@property(nonatomic, weak)     NSMutableArray* m_pArrayTimes;
 -(void)readData: (int)nID;
 -(IBAction)onBack:(id)sender;
 -(void)animationView:(UIView*)view initFrame:(CGRect)sFrame endFrame:(CGRect)eFrame initAlpha:(float)sAlpha endAlpha:(float)eAlpha  animationtime:(float)rTime;

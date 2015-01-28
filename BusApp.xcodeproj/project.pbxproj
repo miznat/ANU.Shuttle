@@ -75,6 +75,9 @@
 		CEF103D01A792F8F00D3ACB4 /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF103C71A792F8F00D3ACB4 /* ECSlidingViewController.m */; };
 		CEF103D11A792F8F00D3ACB4 /* MEZoomAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF103C91A792F8F00D3ACB4 /* MEZoomAnimationController.m */; };
 		CEF103D21A792F8F00D3ACB4 /* UIViewController+ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF103CB1A792F8F00D3ACB4 /* UIViewController+ECSlidingViewController.m */; };
+		CEF103D71A79333E00D3ACB4 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF103D51A79333E00D3ACB4 /* MenuViewController.m */; };
+		CEF103DB1A793E0100D3ACB4 /* UIViewController+Slide.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF103DA1A793E0100D3ACB4 /* UIViewController+Slide.m */; };
+		CEF103DE1A7946E100D3ACB4 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF103DD1A7946E100D3ACB4 /* Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -178,6 +181,11 @@
 		CEF103C91A792F8F00D3ACB4 /* MEZoomAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEZoomAnimationController.m; sourceTree = "<group>"; };
 		CEF103CA1A792F8F00D3ACB4 /* UIViewController+ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ECSlidingViewController.h"; sourceTree = "<group>"; };
 		CEF103CB1A792F8F00D3ACB4 /* UIViewController+ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ECSlidingViewController.m"; sourceTree = "<group>"; };
+		CEF103D41A79333E00D3ACB4 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		CEF103D51A79333E00D3ACB4 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		CEF103D91A793E0100D3ACB4 /* UIViewController+Slide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Slide.h"; sourceTree = "<group>"; };
+		CEF103DA1A793E0100D3ACB4 /* UIViewController+Slide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Slide.m"; sourceTree = "<group>"; };
+		CEF103DD1A7946E100D3ACB4 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +254,7 @@
 		3C053C4416F7C55C00FA1191 = {
 			isa = PBXGroup;
 			children = (
+				CEF103DD1A7946E100D3ACB4 /* Storyboard.storyboard */,
 				33AE3700194D7CB000722618 /* info.png */,
 				CEF103BC1A792F8F00D3ACB4 /* ECSlidingViewController */,
 				33562EFB194D639700D2703A /* Flurry */,
@@ -305,6 +314,8 @@
 		3C053C5616F7C55C00FA1191 /* BusApp */ = {
 			isa = PBXGroup;
 			children = (
+				CEF103D91A793E0100D3ACB4 /* UIViewController+Slide.h */,
+				CEF103DA1A793E0100D3ACB4 /* UIViewController+Slide.m */,
 				3C053C5716F7C55C00FA1191 /* Supporting Files */,
 				3C053C5F16F7C55C00FA1191 /* AppDelegate.h */,
 				3C053C6016F7C55C00FA1191 /* AppDelegate.m */,
@@ -327,6 +338,8 @@
 				3CBC888516FD862600066C54 /* BusDBManager.h */,
 				3CBC888616FD862600066C54 /* BusDBManager.m */,
 				33B920EE18410B8700FC656A /* Images.xcassets */,
+				CEF103D41A79333E00D3ACB4 /* MenuViewController.h */,
+				CEF103D51A79333E00D3ACB4 /* MenuViewController.m */,
 			);
 			path = BusApp;
 			sourceTree = "<group>";
@@ -481,6 +494,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF103DE1A7946E100D3ACB4 /* Storyboard.storyboard in Resources */,
 				3C053C5B16F7C55C00FA1191 /* InfoPlist.strings in Resources */,
 				3C053C6316F7C55C00FA1191 /* Default.png in Resources */,
 				3C053C6516F7C55C00FA1191 /* Default@2x.png in Resources */,
@@ -520,8 +534,10 @@
 			files = (
 				3C053C5D16F7C55C00FA1191 /* main.m in Sources */,
 				3C053C6116F7C55C00FA1191 /* AppDelegate.m in Sources */,
+				CEF103DB1A793E0100D3ACB4 /* UIViewController+Slide.m in Sources */,
 				CEF103D21A792F8F00D3ACB4 /* UIViewController+ECSlidingViewController.m in Sources */,
 				3C053C6A16F7C55C00FA1191 /* FirstViewController.m in Sources */,
+				CEF103D71A79333E00D3ACB4 /* MenuViewController.m in Sources */,
 				3C053C7116F7C55C00FA1191 /* SecondViewController.m in Sources */,
 				3C053C8B16F7C5F700FA1191 /* FMDatabase.m in Sources */,
 				CEF103CC1A792F8F00D3ACB4 /* ECPercentDrivenInteractiveTransition.m in Sources */,
@@ -641,6 +657,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -669,6 +686,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (

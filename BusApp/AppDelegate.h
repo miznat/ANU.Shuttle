@@ -10,15 +10,16 @@
 #import "FMDatabase.h"
 
 @class BusDBManager;
+@class ECSlidingViewController;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 {
-    NSString* szBusInfoDBPath;
-    NSString* szRouteInfoDbPath;
+    NSString* __weak szBusInfoDBPath;
+    NSString* __weak szRouteInfoDbPath;
     NSString* szTotalDBPath;
     
-    FMDatabase* m_pBusInfoDB;
-    FMDatabase* m_pRouteInfoDB;
+    FMDatabase* __weak m_pBusInfoDB;
+    FMDatabase* __weak m_pRouteInfoDB;
     BusDBManager* m_pBusDBManager;
     
     NSMutableArray* arrayRouteInfo;
@@ -32,14 +33,14 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) UITabBarController *tabBarController;
+@property (strong, nonatomic) ECSlidingViewController *slideMenuController;
 
-@property (nonatomic, assign) NSString* szBusInfoDBPath;
-@property (nonatomic, assign) NSString* szRouteInfoDbPath;
-@property (nonatomic, assign) FMDatabase* m_pBusInfoDB;
-@property (nonatomic, assign) FMDatabase* m_pRouteInfoDB;
-@property (nonatomic, assign) BusDBManager* m_pBusDBManager;
-@property (nonatomic, retain) NSMutableArray* arrayRouteInfo;
-@property (nonatomic, retain) NSMutableArray* arrayBusInfo;
+@property (nonatomic, weak) NSString* szBusInfoDBPath;
+@property (nonatomic, weak) NSString* szRouteInfoDbPath;
+@property (nonatomic, weak) FMDatabase* m_pBusInfoDB;
+@property (nonatomic, weak) FMDatabase* m_pRouteInfoDB;
+@property (nonatomic) BusDBManager* m_pBusDBManager;
+@property (nonatomic, strong) NSMutableArray* arrayRouteInfo;
+@property (nonatomic, strong) NSMutableArray* arrayBusInfo;
 
 @end

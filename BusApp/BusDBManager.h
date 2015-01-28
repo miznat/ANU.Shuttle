@@ -15,7 +15,7 @@
 }
 
 @property(nonatomic)     NSInteger nID;
-@property(nonatomic, retain)     NSString* szText;
+@property(nonatomic, strong)     NSString* szText;
 
 @end
 
@@ -52,10 +52,10 @@
     
 }
 
-@property(nonatomic, retain)     NSMutableArray* m_arrayTextList;
-@property(nonatomic, retain)     NSMutableArray* m_arrayTimeList;
-@property(nonatomic, retain)     NSMutableArray* m_arrayTimeListText;
-@property(nonatomic, retain)        NSString* m_szDataBasePath;
+@property(nonatomic, strong)     NSMutableArray* m_arrayTextList;
+@property(nonatomic, strong)     NSMutableArray* m_arrayTimeList;
+@property(nonatomic, strong)     NSMutableArray* m_arrayTimeListText;
+@property(nonatomic, strong)        NSString* m_szDataBasePath;
 
 -(void) readInitialData:(NSString *)dbPth;
 -(id)initWithName:(NSString *)szDBPath;

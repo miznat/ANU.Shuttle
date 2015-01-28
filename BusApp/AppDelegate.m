@@ -17,6 +17,8 @@
 #import "InfoViewController.h"
 #import "BusDBManager.h"
 #import "GAI.h"
+#import "ECSlidingViewController.h"
+#import "MenuViewController.h"
 
 
 @implementation AppDelegate
@@ -26,12 +28,6 @@
 @synthesize m_pBusInfoDB, m_pRouteInfoDB;
 @synthesize m_pBusDBManager;
 
-- (void)dealloc
-{
-    [_window release];
-    [_tabBarController release];
-    [super dealloc];
-}
 
 #define FLURRY_API_KEY @"xxP6QQCYB5PM67FPN9Z9NF"
 
@@ -63,18 +59,16 @@
     m_pBusDBManager = [[BusDBManager alloc] initWithName:szTotalDBPath];
 //    [self GetDisplayData];
     
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    UIViewController *viewController1 = [[[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil] autorelease];
-    UIViewController *viewController2 = [[[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil] autorelease];
-    
-    UIViewController *viewController3= [[[Times2ViewController alloc] initWithNibName:@"Times2ViewController" bundle:nil] autorelease];
-    UIViewController *viewController4= [[[InfoViewController alloc] initWithNibName:@"InfoViewController" bundle:nil] autorelease];
+    UIViewController *viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil];
     
 
-    self.tabBarController = [[[UITabBarController alloc] init] autorelease];
-    self.tabBarController.viewControllers = @[viewController1, viewController2, viewController3, viewController4];
-    self.window.rootViewController = self.tabBarController;
+    self.slideMenuController = [[ECSlidingViewController alloc] init];
+    self.window.rootViewController = self.slideMenuController;
+    self.slideMenuController.topViewController = viewController1;
+    UIViewController *menuVC = [[UIStoryboard storyboardWithName:@"Storyboard" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"MenuVC"];
+    self.slideMenuController.underLeftViewController = menuVC;
     [self.window makeKeyAndVisible];
     
     [[UITabBar appearance] setTintColor:[UIColor yellowColor]]; // colour of text when selected
@@ -113,12 +107,10 @@
     if(arrayRouteInfo)
     {
         [arrayRouteInfo removeAllObjects];
-        [arrayRouteInfo release];
     }
     if(arrayBusInfo)
     {
         [arrayBusInfo removeAllObjects];
-        [arrayBusInfo release];
     }
 }
 
@@ -158,19 +150,6 @@
     int m_nShowCount = [m_pBusDBManager GetReminTimeList:10 minute:10];
     
 }
-/*
-// Optional UITabBarControllerDelegate method.
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
-{
-}
-*/
-
-/*
-// Optional UITabBarControllerDelegate method.
-- (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed
-{
-}
-*/
 
 
 

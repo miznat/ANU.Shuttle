@@ -47,6 +47,8 @@
 		<string>LithosPro-Bold.otf</string>
 		<string>LithosPro-Regular.otf</string>
 	</array>
+	<key>UIMainStoryboardFile</key>
+	<string>Storyboard</string>
 	<key>UIPrerenderedIcon</key>
 	<true/>
 	<key>UIRequiredDeviceCapabilities</key>

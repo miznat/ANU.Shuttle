@@ -10,6 +10,8 @@
 
 @interface InfoViewController ()
 
+@property (weak) IBOutlet UIButton *menuButton;
+
 @end
 
 @implementation InfoViewController
@@ -26,6 +28,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+     [self.menuButton addTarget:self action:@selector(menuButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     
     [self setNeedsStatusBarAppearanceUpdate];
     

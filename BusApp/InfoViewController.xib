@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InfoViewController">
             <connections>
                 <outlet property="m_webView" destination="4" id="9"/>
+                <outlet property="menuButton" destination="3Vn-Nt-CpU" id="qUg-QT-5V5"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -27,6 +28,12 @@
                     <rect key="frame" x="40" y="289" width="240" height="128"/>
                     <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Vn-Nt-CpU">
+                    <rect key="frame" x="0.0" y="7" width="50" height="44"/>
+                    <state key="normal" image="Menu">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
             <constraints>
@@ -37,6 +44,7 @@
         </view>
     </objects>
     <resources>
+        <image name="Menu" width="21" height="10"/>
         <image name="info.png" width="1024" height="1024"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

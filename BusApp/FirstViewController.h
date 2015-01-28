@@ -36,10 +36,10 @@
     NSInteger nRouteMin;
 }
 
-@property(nonatomic, retain)     NSString* szRouteName;
+@property(nonatomic, strong)     NSString* szRouteName;
 @property(nonatomic) NSInteger nRouteHour;
 @property(nonatomic) NSInteger nRouteMin;
 
-@property (retain, nonatomic) IBOutlet UINavigationBar *navBar;
+@property (strong, nonatomic) IBOutlet UINavigationBar *navBar;
 
 @end

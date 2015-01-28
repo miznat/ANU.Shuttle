@@ -15,6 +15,8 @@
 
 @interface SecondViewController ()
 
+@property (weak) IBOutlet UIButton *menuButton;
+
 @end
 
 @implementation SecondViewController
@@ -36,6 +38,8 @@
 {
     
     [self setNeedsStatusBarAppearanceUpdate];
+    
+     [self.menuButton addTarget:self action:@selector(menuButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     
     m_fShowDetail = NO;
     [m_detailTableView setTag:2];
@@ -97,7 +101,7 @@
     UIColor* colorLabel = [UIColor colorWithRed:232/255.0f green:45/255.0f blue:92/255.0f alpha:1];
     if(cell == nil)
     {
-        cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier];
         
         
         UILabel *dataLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 8.0, 320.0, 30.0)];
@@ -120,7 +124,6 @@
         [dataLabel setTextAlignment:NSTextAlignmentCenter];
         // custom views should be added as subviews of the cell's contentView:
         [cell.contentView addSubview:dataLabel];
-        [dataLabel release];
         
     }
     //    Customer *customer = [self.customers objectAtIndex:[indexPath row]];
@@ -189,7 +192,6 @@
     AppDelegate* appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     if(m_pArrayTimes != nil)
         [m_pArrayTimes removeAllObjects];
-    [m_pArrayTimes release];
     m_pArrayTimes = [[appDelegate m_pBusDBManager] GetTimeListByText:nID];
     
 }
